@@ -7,7 +7,7 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class VelocityInteractable : XRGrabInteractable
 {
-    [SerializeField] private ControllerVelocity ControllerVelocity;
+    [SerializeField] private ControllerInputs ControllerInputs;
     private CharacterController controller;
     private Rigidbody rb;
     private bool climbActive = false;
@@ -27,7 +27,7 @@ public class VelocityInteractable : XRGrabInteractable
     protected override void OnSelectEntered(SelectEnterEventArgs args)
     {
         base.OnSelectEntered(args);
-        ControllerVelocity = args.interactorObject.transform.GetComponent<ControllerVelocity>();
+        ControllerInputs = args.interactorObject.transform.GetComponent<ControllerInputs>();
         rb.velocity = Vector3.zero;
         climbActive = true;
     }
@@ -37,18 +37,18 @@ public class VelocityInteractable : XRGrabInteractable
         climbActive = false;
         ApplyForceOnRelease();
         base.OnSelectExited(args);
-        ControllerVelocity = null;
+        ControllerInputs = null;
     }
 
     private void Climb()
     {
-        Vector3 v = ControllerVelocity ? ControllerVelocity.Velocity : Vector3.zero;
+        Vector3 v = ControllerInputs ? ControllerInputs.Velocity : Vector3.zero;
         controller.Move(controller.transform.rotation * -v * Time.fixedDeltaTime);
     }
 
     private void ApplyForceOnRelease()
     {
-        Vector3 v = ControllerVelocity ? ControllerVelocity.Velocity : Vector3.zero;
+        Vector3 v = ControllerInputs ? ControllerInputs.Velocity : Vector3.zero;
         rb.velocity = -v;
     }
 }
