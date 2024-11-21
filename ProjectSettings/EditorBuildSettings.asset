@@ -5,13 +5,13 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/LofiScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/InsideShip.unity
     guid: 2b21154d818a7824689fb79e1609dbe2
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/OutsideShip.unity
     guid: b1b7b4f21921c41408ba6e2ad772da4c
   m_configObjects:
