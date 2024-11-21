@@ -24,6 +24,9 @@ public class JoystickController : XRGrabInteractable
         if (grabbed)
         {
             Move();
+        } else
+        {
+            transform.localPosition = startPos;
         }
 
     }
@@ -37,7 +40,7 @@ public class JoystickController : XRGrabInteractable
     protected override void OnSelectExited(SelectExitEventArgs args)
     {
         grabbed = false;
-        transform.localPosition = startPos;
+        //transform.localPosition = startPos;
         base.OnSelectExited(args);
     }
 
