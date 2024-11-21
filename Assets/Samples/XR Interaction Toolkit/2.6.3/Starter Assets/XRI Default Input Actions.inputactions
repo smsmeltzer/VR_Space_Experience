@@ -999,7 +999,7 @@
                 {
                     "name": "",
                     "id": "bc8a5288-63b3-454d-bd0b-ccb18ff13dbc",
-                    "path": "<XRController>{LeftHand}/{PrimaryButton}",
+                    "path": "<OculusTouchController>{LeftHand}/primaryButton",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -1010,7 +1010,7 @@
                 {
                     "name": "",
                     "id": "dcf99730-c54c-40d2-85f0-f7c7837a7471",
-                    "path": "<XRController>{LeftHand}/{SecondaryButton}",
+                    "path": "<OculusTouchController>{LeftHand}/secondaryButton",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -1021,7 +1021,7 @@
                 {
                     "name": "",
                     "id": "47d1a615-931e-4f40-8964-134cd773ad50",
-                    "path": "<XRController>{LeftHand}/{Primary2DAxis}",
+                    "path": "<OculusTouchController>{LeftHand}/thumbstick",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -1875,7 +1875,7 @@
                 {
                     "name": "",
                     "id": "a2dac6d6-2aa1-4a75-bc90-f5fe8416102d",
-                    "path": "<XRController>{RightHand}/{PrimaryButton}",
+                    "path": "<OculusTouchController>{RightHand}/primaryButton",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -1886,7 +1886,7 @@
                 {
                     "name": "",
                     "id": "fcff374d-b962-44be-806c-2903dda42cc5",
-                    "path": "<XRController>{RightHand}/{SecondaryButton}",
+                    "path": "<OculusTouchController>{RightHand}/secondaryButton",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -1897,7 +1897,7 @@
                 {
                     "name": "",
                     "id": "d61c78a3-21bf-40e7-a18f-53172d2efa45",
-                    "path": "<XRController>{RightHand}/{Primary2DAxis}",
+                    "path": "<OculusTouchController>{RightHand}/thumbstick",
                     "interactions": "",
                     "processors": "",
                     "groups": ";Noncontinuous Move",
