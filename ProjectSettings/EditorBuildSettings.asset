@@ -8,12 +8,18 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/LofiScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/InsideShip.unity
     guid: 2b21154d818a7824689fb79e1609dbe2
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/OutsideShip.unity
     guid: b1b7b4f21921c41408ba6e2ad772da4c
+  - enabled: 0
+    path: Assets/Scenes/RiggingTest.unity
+    guid: 14ff6a2d6153e9844949e23a0a4f46b6
+  - enabled: 1
+    path: Assets/Scenes/ClimbingTest.unity
+    guid: e264ceb40ab3176428c78fd82b3fe573
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: b2df5b42c6c172144b00e98d9cac80e9, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: c348712bda248c246b8c49b3db54643f, type: 3}
