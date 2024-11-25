@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.XR;
 using UnityEngine.XR.Interaction.Toolkit;
 
 public class ControllerInputs : MonoBehaviour
@@ -22,6 +23,17 @@ public class ControllerInputs : MonoBehaviour
     public bool secondaryPressed;    
 
     public XRBaseController controller;
+
+    
+    /*
+    void Awake()
+    {
+        // Ensure XRController is assigned
+        if (controller == null)
+            controller = GetComponent<XRBaseController>();
+
+        
+    }*/
 
     void Update()
     {
