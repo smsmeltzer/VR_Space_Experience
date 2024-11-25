@@ -14,10 +14,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/OutsideShip.unity
     guid: b1b7b4f21921c41408ba6e2ad772da4c
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/RiggingTest.unity
     guid: 14ff6a2d6153e9844949e23a0a4f46b6
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/ClimbingTest.unity
     guid: e264ceb40ab3176428c78fd82b3fe573
   m_configObjects:

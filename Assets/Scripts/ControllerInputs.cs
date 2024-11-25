@@ -13,13 +13,13 @@ public class ControllerInputs : MonoBehaviour
     public InputActionProperty secondaryButton; // Y or B
     public InputActionProperty thumbstickProperty;
 
-    public Vector3 Velocity = Vector3.zero;
-    public Vector3 Position = Vector3.zero;
-    public Vector3 Rotation = Vector3.zero;
-    public Vector2 Thumbstick = Vector2.zero;
+    public Vector3 Velocity;
+    public Vector3 Position;
+    public Quaternion Rotation;
+    public Vector2 Thumbstick;
 
-    public bool primaryPressed = false;   
-    public bool secondaryPressed = false;    
+    public bool primaryPressed;   
+    public bool secondaryPressed;    
 
     public XRBaseController controller;
 
@@ -27,10 +27,21 @@ public class ControllerInputs : MonoBehaviour
     {
         Velocity = velocityProperty.action.ReadValue<Vector3>();
         Position = positionProperty.action.ReadValue<Vector3>();
-        Rotation = rotationProperty.action.ReadValue<Vector3>();
+        Rotation = rotationProperty.action.ReadValue<Quaternion>();
+
         Thumbstick = thumbstickProperty.action.ReadValue<Vector2>();
 
-        primaryPressed = primaryButton.action.ReadValue<bool>();
-        secondaryPressed = secondaryButton.action.ReadValue<bool>();
+        primaryPressed = primaryButton.action.IsPressed();
+        secondaryPressed = secondaryButton.action.IsPressed();
+    }
+
+    override public string ToString()
+    {
+        return "V: " + Velocity.ToString() + 
+            "\nPos: " + Position.ToString() + 
+            "\nRot: " + Rotation.ToString() + 
+            "\nThumb: " + Thumbstick.ToString() + 
+            "\nPrimary: " + primaryPressed.ToString() + 
+            "\nSecondary: " + secondaryPressed.ToString();
     }
 }
