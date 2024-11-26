@@ -8,9 +8,18 @@ public class PlayerData : MonoBehaviour
     [SerializeField] private GameObject fuelGauge;
     public int fuel;
 
+    public enum Difficulty
+    {
+        Easy,
+        Medium,
+        Hard
+    }
+    public Difficulty difficulty;
+
     void Start()
     {
         fuel = 100;
+        difficulty = Difficulty.Hard;
     }
 
     void Update()
