@@ -6311,11 +6311,6 @@ LightingSettings:
   m_PVRTiledBaking: 0
   m_NumRaysToShootPerTexel: -1
   m_RespectSceneVisibilityWhenBakingGI: 0
---- !u!20 &2102078355 stripped
-Camera:
-  m_CorrespondingSourceObject: {fileID: 2737323065676291973, guid: 91d39b266acbb6d41906226008eb06c4, type: 3}
-  m_PrefabInstance: {fileID: 1975797716}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3983811426701700582
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6347,7 +6342,7 @@ PrefabInstance:
     - target: {fileID: 1738792625946489816, guid: c756a253b1a4d9a4c99178e9451bae63, type: 3}
       propertyPath: m_Camera
       value: 
-      objectReference: {fileID: 2102078355}
+      objectReference: {fileID: 0}
     - target: {fileID: 1738792625946489816, guid: c756a253b1a4d9a4c99178e9451bae63, type: 3}
       propertyPath: m_RenderMode
       value: 0
