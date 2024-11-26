@@ -13,9 +13,8 @@ public class JoystickVelocity : MonoBehaviour
 
     [SerializeField] private Rigidbody rb;
     [SerializeField] private Transform xrOrigin;
-    // private float angleInDegrees;
-    // private Vector3 rotationAxis;
-    // private Vector3 angularDisplacement;
+    [SerializeField] private PlayerData playerData;
+
     private Quaternion angularVelocity;
     private Quaternion angularAcceleration;
 
@@ -39,18 +38,36 @@ public class JoystickVelocity : MonoBehaviour
 
             if (joystickController.positionController)
             {
-                rb.velocity += (joystickController.currPos - joystickController.startPos).normalized * (5.0f * Time.deltaTime * (joystickController.currPos - joystickController.startPos).magnitude);
+                if (playerData.difficulty == PlayerData.Difficulty.Hard)
+                {
+                    rb.velocity += (joystickController.currPos - joystickController.startPos).normalized * (5.0f * Time.deltaTime * (joystickController.currPos - joystickController.startPos).magnitude);
+                }
+                else if (playerData.difficulty == PlayerData.Difficulty.Medium)
+                {
+                    rb.velocity = (joystickController.currPos - joystickController.startPos).normalized * (5.0f * Time.deltaTime * (joystickController.currPos - joystickController.startPos).magnitude);
+                }
+
                 if (joystickController.rotationController)
                 {
                     //Quaternion deltaQuat = joystickController.currRot * Quaternion.Inverse(joystickController.startRot);
                     Vector3 delvec = joystickController.currRot.eulerAngles - joystickController.startRot.eulerAngles;
                     rb.angularVelocity = delvec * ((3.14f / 180) * 0.03f);
                 }
+
             } else if (joystickController.rotationController)
             {
-                angularVelocity = Quaternion.Euler(swap * (xrOrigin.worldToLocalMatrix * ((joystickController.currPos - joystickController.startPos).normalized * (0.1f * Time.deltaTime * (joystickController.currPos - joystickController.startPos).magnitude))));
+                angularVelocity = Quaternion.Euler(swap * (xrOrigin.worldToLocalMatrix * ((joystickController.currPos - joystickController.startPos).normalized * (1.0f * Time.deltaTime * (joystickController.currPos - joystickController.startPos).magnitude))));
                 angularAcceleration *= angularVelocity;
                 rb.rotation *= angularAcceleration;
+
+                if (playerData.difficulty == PlayerData.Difficulty.Hard)
+                {
+                    rb.rotation *= angularAcceleration;
+                }
+                else if (playerData.difficulty == PlayerData.Difficulty.Medium)
+                {
+                    rb.rotation *= angularVelocity;
+                }
 
             }
         }

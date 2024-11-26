@@ -12,19 +12,43 @@ public class ControllerVelocity : MonoBehaviour
 
     [SerializeField] private ControllerInputs LeftController;
     [SerializeField] private ControllerInputs RightController;
-    public Rigidbody rb;
+    [SerializeField] private Rigidbody rb;
+    [SerializeField] private Transform xrOrigin;
+    [SerializeField] private PlayerData playerData;
+
+    private Quaternion angularVelocity;
+    private Quaternion angularAcceleration;
+    private Matrix4x4 swap;
 
     void Start()
     {
-        rb = GameObject.Find("XR Origin").GetComponent<Rigidbody>();
         rb.velocity = Vector3.zero;
+        angularVelocity = Quaternion.identity;
+        angularAcceleration = Quaternion.identity;
+
+        swap = Matrix4x4.zero;
+        swap.SetRow(1, new Vector4(0.0f, 1.0f, 0.0f, 0.0f));
     }
     void Update()
     {
         Velocity = velocityProperty.action.ReadValue<Vector3>();
         // rb.velocity += (Vector3.forward / 100.0f);
 
-        rb.velocity += (new Vector3(LeftController.Thumbstick[0], LeftController.Thumbstick[1], 0.0f)).normalized * 1.0f;
+
+        angularVelocity = Quaternion.Euler(swap * ( (RightController.Thumbstick.normalized * (1.0f * Time.deltaTime * RightController.Thumbstick.magnitude))));
+        angularAcceleration *= angularVelocity;
+        rb.rotation *= angularAcceleration;
+
+        if (playerData.difficulty == PlayerData.Difficulty.Hard)
+        {
+            rb.rotation *= angularAcceleration;
+        }
+        else if (playerData.difficulty == PlayerData.Difficulty.Medium)
+        {
+            rb.rotation *= angularVelocity;
+        }
+
+        
 
     }
 }
