@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -7,10 +8,13 @@ public class PlayerData : MonoBehaviour
 {
     [SerializeField] private GameObject fuelGauge;
     public int fuel;
+    public TextMeshProUGUI collectibleGauge;
+    public int collectibles;
 
     void Start()
     {
         fuel = 100;
+        collectibles = 0;
     }
 
     void Update()
@@ -40,5 +44,11 @@ public class PlayerData : MonoBehaviour
     public bool HasFuel()
     {
         return fuel > 0;
+    }
+
+    public void collectItem()
+    {
+        collectibles++;
+        collectibleGauge.text = collectibles.ToString();
     }
 }

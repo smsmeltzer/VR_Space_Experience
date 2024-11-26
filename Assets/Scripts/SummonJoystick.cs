@@ -13,7 +13,7 @@ public class SummonJoystick : MonoBehaviour
     {
         if (controller.primaryPressed)
         {
-            transform.position = controller.Position;
+            transform.localPosition = controller.Position;
         }
     }
 }
