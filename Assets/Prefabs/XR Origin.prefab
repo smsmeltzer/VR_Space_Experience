@@ -155,6 +155,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fuelGauge: {fileID: 0}
   fuel: 0
+  collectibleGauge: {fileID: 0}
+  collectibles: 0
   difficulty: 0
 --- !u!1 &38549549958634870
 GameObject:
@@ -1596,7 +1598,7 @@ Transform:
   m_GameObject: {fileID: 2187258744434863081}
   serializedVersion: 2
   m_LocalRotation: {x: 0.13046221, y: -0, z: -0, w: 0.9914533}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0, y: -0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1691,9 +1693,9 @@ Transform:
   m_GameObject: {fileID: 2233814199725091288}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.096, z: -0.114}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: 0, y: -0.55, z: -0.114}
+  m_LocalScale: {x: 1.06, y: 1.06, z: 1.06}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 4920336264407998240}
   - {fileID: 4393089867932439926}
@@ -5795,7 +5797,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8019237744711403369}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 919e39492806b334982b6b84c90dd927, type: 3}
   m_Name: 
@@ -5883,6 +5885,7 @@ MonoBehaviour:
   - {fileID: 9195503997129592481}
   rb: {fileID: 7117354680242194388}
   xrOrigin: {fileID: 812111797783779675}
+  playerData: {fileID: 5703240374889741154}
 --- !u!1 &8066549676983405765
 GameObject:
   m_ObjectHideFlags: 0
@@ -6030,8 +6033,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.48, y: 1.48, z: 1.48}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1225914753283936538}
   - {fileID: 5457554575578607709}
