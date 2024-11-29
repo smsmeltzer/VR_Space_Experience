@@ -27,7 +27,7 @@ public class ControllerVelocity : MonoBehaviour
         angularAcceleration = Quaternion.identity;
 
         swap = Matrix4x4.zero;
-        swap.SetRow(1, new Vector4(0.0f, 1.0f, 0.0f, 0.0f));
+        swap.SetRow(1, new Vector4(0.0f, -1.0f, 0.0f, 0.0f));
     }
     void Update()
     {
