@@ -156,6 +156,8 @@ MonoBehaviour:
   fuelGauge: {fileID: 0}
   fuel: 0
   isGrabbing: 0
+  collectibleGauge: {fileID: 0}
+  collectibles: 0
   difficulty: 0
 --- !u!1 &38549549958634870
 GameObject:
