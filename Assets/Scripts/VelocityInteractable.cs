@@ -47,18 +47,18 @@ public class VelocityInteractable : XRGrabInteractable
 
     private void Climb()
     {
-        //Vector3 v = ControllerInputs ? ControllerInputs.Velocity : Vector3.zero;
-        //controller.Move(controller.transform.rotation * -v * Time.fixedDeltaTime);
+        Vector3 v = ControllerInputs ? ControllerInputs.Velocity : Vector3.zero;
+        controller.Move(controller.transform.rotation * -v * Time.fixedDeltaTime);
         //rb.position = rb.rotation * -v * Time.fixedDeltaTime;
 
-        rb.position += grabPos - ControllerInputs.transform.position * Time.fixedDeltaTime;
-        grabPos = ControllerInputs.transform.position;
+        //rb.position += grabPos - ControllerInputs.transform.position * Time.fixedDeltaTime;
+        //grabPos = ControllerInputs.transform.position;
     }
 
     private void ApplyForceOnRelease()
     {
-        //Vector3 v = ControllerInputs ? ControllerInputs.Velocity : Vector3.zero;
-        Vector3 v = (grabPos - ControllerInputs.transform.position) * Time.fixedDeltaTime;
+        Vector3 v = ControllerInputs ? ControllerInputs.Velocity : Vector3.zero;
+        //Vector3 v = (grabPos - ControllerInputs.transform.position) * Time.fixedDeltaTime;
         rb.velocity = -v;
     }
 }

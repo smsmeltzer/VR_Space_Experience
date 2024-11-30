@@ -10,9 +10,12 @@ public class ChangeScene : MonoBehaviour
     [SerializeField] private UIManager ui;
     public string sceneName;
 
+    private AudioSource AudioSource;
+
     private void Start()
     {
         ui = GameObject.Find("UI").GetComponent<UIManager>();
+        AudioSource = GetComponent<AudioSource>();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -20,6 +23,7 @@ public class ChangeScene : MonoBehaviour
         Debug.Log(other.tag);
         if (other.tag == "Player")
         {
+            AudioSource.Play();
             StartCoroutine(Activate());
         }
     }

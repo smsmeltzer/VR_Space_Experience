@@ -7,6 +7,7 @@ public class PlayerData : MonoBehaviour
 {
     [SerializeField] private GameObject fuelGauge;
     public int fuel;
+    public bool isGrabbing = false;
 
     public enum Difficulty
     {
@@ -21,12 +22,6 @@ public class PlayerData : MonoBehaviour
         fuel = 100;
         difficulty = Difficulty.Hard;
     }
-
-    void Update()
-    {
-        
-    }
-
     public void Refuel()
     {
         fuel = 100;
