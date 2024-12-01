@@ -32,7 +32,7 @@ public class ChangeScene : MonoBehaviour
     {
         var op = SceneManager.LoadSceneAsync(sceneName);
         op.allowSceneActivation = false;
-
+        AudioSource.Play();
         float t = 0;
 
         while (op.progress < 0.9f || t < 1)

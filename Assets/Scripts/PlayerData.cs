@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class PlayerData : MonoBehaviour
 {
-    [SerializeField] private GameObject fuelGauge;
+    [SerializeField] private FuelGaugeBehavior fuelGauge;
     public int fuel;
     public bool isGrabbing = false;
     public TextMeshProUGUI collectibleGauge;
@@ -23,12 +23,18 @@ public class PlayerData : MonoBehaviour
     void Start()
     {
         fuel = 100;
-        difficulty = Difficulty.Hard;
         collectibles = 0;
+    }
+
+    private void Update()
+    {
+        fuelGauge.UpdateDisplay(fuel);
+
     }
     public void Refuel()
     {
         fuel = 100;
+        fuelGauge.UpdateDisplay(fuel);
     }
 
     public bool useFuel(int amount)
@@ -42,6 +48,7 @@ public class PlayerData : MonoBehaviour
             fuel = 0;
             return false;
         }
+        fuelGauge.UpdateDisplay(fuel);
         return true;
     }
 

@@ -1,28 +1,36 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UIElements;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class FuelStationBehavior : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public float respawnTime = 20;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    private bool CanRespawn = true;
 
-    private void OnCollisionEnter(Collision collision)
+    private Queue<GameObject> RespawnQueue = new Queue<GameObject>();
+
+    private void Update()
     {
-        GameObject obj = collision.gameObject;
-        if (obj.tag == "Player")
+        if (CanRespawn && RespawnQueue.Count > 0)
         {
-            obj.GetComponent<PlayerData>().Refuel();
+            StartCoroutine(RespawnFuel(RespawnQueue.Dequeue()));
         }
+    }
+    public void Respawn(GameObject obj)
+    {
+        RespawnQueue.Enqueue(obj);
+    }
+
+    private IEnumerator RespawnFuel(GameObject obj)
+    {
+        CanRespawn = false;
+        yield return new WaitForSeconds(respawnTime);
+        obj.GetComponent<XRGrabInteractable>().enabled = true;
+        obj.SetActive(true);
+        CanRespawn = true;
     }
 }
