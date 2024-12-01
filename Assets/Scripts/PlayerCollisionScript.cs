@@ -19,12 +19,9 @@ public class PlayerCollisionScript : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         GameObject obj = collision.gameObject;
-        if (obj.tag == "Player")
+        if (obj.tag == "Player" || obj.tag == "Hands")
         {
-            Rigidbody rb = obj.GetComponent<Rigidbody>();   
-            rb.velocity = Vector3.zero;
-            rb.angularVelocity = Vector3.zero;  
-            rb.rotation = Quaternion.identity;  
+            PlayerData.StopPlayerMovement(); 
         }
     }
 }

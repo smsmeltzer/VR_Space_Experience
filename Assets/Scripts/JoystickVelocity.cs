@@ -83,4 +83,10 @@ public class JoystickVelocity : MonoBehaviour
         
         
     }
+
+    public void ResetJoystickMovement()
+    {
+        angularVelocity = Quaternion.identity;
+        angularAcceleration = Quaternion.identity;
+    }
 }

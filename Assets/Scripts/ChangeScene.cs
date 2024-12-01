@@ -28,7 +28,7 @@ public class ChangeScene : MonoBehaviour
         }
     }
 
-    IEnumerator Activate()
+    public IEnumerator Activate()
     {
         var op = SceneManager.LoadSceneAsync(sceneName);
         op.allowSceneActivation = false;

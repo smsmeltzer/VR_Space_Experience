@@ -4,9 +4,9 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.XR.Interaction.Toolkit;
 
-public class ResetButton : XRSimpleInteractable
+public class SoftResetButton : XRSimpleInteractable
 {
-    public float HoldTime = 5.0f;
+    public float HoldTime = 3.0f;
     private bool isGrabbed = false;
     private float timer = 0.0f;
 
@@ -21,8 +21,9 @@ public class ResetButton : XRSimpleInteractable
 
             if (timer > HoldTime)
             {
-                transform.position -= new Vector3(0, -.01f, 0);
-                ResetPlayer();
+                transform.position = Vector3.zero;
+
+                SoftReset();
             }
         }
     }
@@ -31,23 +32,19 @@ public class ResetButton : XRSimpleInteractable
         base.OnSelectEntered(args);
         isGrabbed = true;
         transform.position += new Vector3(0, -.01f, 0);
-        GetComponent<AudioSource>().Play();
+
     }
 
     protected override void OnSelectExited(SelectExitEventArgs args)
     {
         base.OnSelectExited(args);
         isGrabbed = false;
-        transform.position -= new Vector3(0, -.01f, 0);
-
+        transform.position = Vector3.zero;
     }
 
-    public void ResetPlayer()
+    public void SoftReset()
     {
         PlayerData.ResetPlayerLocation();
         PlayerData.ResetPlayerMovement();
-        PlayerData.ResetPlayerData();
-        string currentSceneName = SceneManager.GetActiveScene().name;
-        SceneManager.LoadScene(currentSceneName);
     }
 }

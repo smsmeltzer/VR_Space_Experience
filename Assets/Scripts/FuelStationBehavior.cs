@@ -10,9 +10,14 @@ public class FuelStationBehavior : MonoBehaviour
     public float respawnTime = 20;
 
     private bool CanRespawn = true;
+    private AudioSource AudioSource;
 
     private Queue<GameObject> RespawnQueue = new Queue<GameObject>();
 
+    private void Start()
+    {
+        AudioSource = GetComponent<AudioSource>();
+    }
     private void Update()
     {
         if (CanRespawn && RespawnQueue.Count > 0)
@@ -23,6 +28,7 @@ public class FuelStationBehavior : MonoBehaviour
     public void Respawn(GameObject obj)
     {
         RespawnQueue.Enqueue(obj);
+        AudioSource.Play();
     }
 
     private IEnumerator RespawnFuel(GameObject obj)

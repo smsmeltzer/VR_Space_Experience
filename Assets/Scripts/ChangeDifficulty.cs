@@ -15,19 +15,13 @@ public class ChangeDifficulty : MonoBehaviour
     }
     public void increaseDifficulty()
     {
-        if (PlayerData.difficulty != PlayerData.Difficulty.Hard)
-        {
-            PlayerData.difficulty = PlayerData.difficulty + 1;
-            DifficultyDisplay.text = PlayerData.difficulty.ToString();
-        }
+        PlayerData.difficulty = PlayerData.Difficulty.Hard;
+        DifficultyDisplay.text = PlayerData.difficulty.ToString();
     }
 
     public void decreaseDifficulty()
     {
-        if (PlayerData.difficulty != PlayerData.Difficulty.Easy)
-        {
-            PlayerData.difficulty = PlayerData.difficulty - 1;
-            DifficultyDisplay.text = PlayerData.difficulty.ToString();
-        }
+        PlayerData.difficulty = PlayerData.Difficulty.Medium;
+        DifficultyDisplay.text = PlayerData.difficulty.ToString();
     }
 }

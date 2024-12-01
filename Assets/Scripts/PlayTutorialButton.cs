@@ -4,16 +4,15 @@ using UnityEngine;
 using UnityEngine.Video;
 using UnityEngine.XR.Interaction.Toolkit;
 
-public class PlayTutorialButton : XRGrabInteractable
+public class PlayTutorialButton : XRSimpleInteractable
 {
     [SerializeField] private VideoPlayer VideoPlayer;
-    private bool isGrabbed = false;
+    public bool onCollisionStart = false;
 
     protected override void OnSelectEntered(SelectEnterEventArgs args)
     {
         base.OnSelectEntered(args);
         transform.position += new Vector3(0, -.01f, 0);
-        isGrabbed = true;
         GetComponent<AudioSource>().Play();
         if (VideoPlayer != null)
         {
@@ -23,8 +22,15 @@ public class PlayTutorialButton : XRGrabInteractable
 
     protected override void OnSelectExited(SelectExitEventArgs args)
     {
-        transform.position = Vector3.zero;
+        transform.position -= new Vector3(0, -.01f, 0);
         base.OnSelectExited(args);
-        isGrabbed = false;
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (onCollisionStart && (collision.gameObject.tag == "Player" || collision.gameObject.tag == "Hands"))
+        {
+            VideoPlayer.Play();
+        }
     }
 }
