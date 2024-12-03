@@ -65,9 +65,10 @@ public class PlayerData : MonoBehaviour
     {
         collectibles++;
         collectibleGauge.text = collectibles.ToString();
-        if (collectibles >= totalCollectibles)
+        if (collectibles >= totalCollectibles && collectibles > 1)
         {
             collectibleGauge.text = "Complete!";
+            // Play win audio message here
         }
     }
 
