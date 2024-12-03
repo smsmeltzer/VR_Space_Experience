@@ -11,7 +11,9 @@ public class PlayerData : MonoBehaviour
     public int fuel = 100;
     public bool isGrabbing = false;
     public TextMeshProUGUI collectibleGauge;
-    public int collectibles = 0;
+    [SerializeField] private GameObject collectiblesParent;
+    [HideInInspector] public int collectibles = 0;
+    private int totalCollectibles;
 
     public enum Difficulty
     {
@@ -25,6 +27,7 @@ public class PlayerData : MonoBehaviour
         fuel = PlayerPrefs.GetInt("fuel");
         collectibles= PlayerPrefs.GetInt("collectibles");
         Enum.TryParse(PlayerPrefs.GetString("difficulty"), out difficulty);
+        totalCollectibles = collectiblesParent?.transform.childCount ?? 1; //sets totalCollectibles to 1 if childCount is collectiblesParent is unassigned
     }
     private void Update()
     {
@@ -57,10 +60,15 @@ public class PlayerData : MonoBehaviour
         return fuel > 0;
     }
 
+    // Triggered in XRGrabInteractable component of collectible prefabs
     public void collectItem()
     {
         collectibles++;
         collectibleGauge.text = collectibles.ToString();
+        if (collectibles >= totalCollectibles)
+        {
+            collectibleGauge.text = "Complete!";
+        }
     }
 
     public void resetCollection()

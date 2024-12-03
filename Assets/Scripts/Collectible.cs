@@ -25,6 +25,7 @@ public class Collectible : MonoBehaviour
         
     }
 
+    // Triggered in XRGrabInteractable component of collectible prefabs
     public void OnCollected()
     {
         Object.Destroy(this.gameObject);
