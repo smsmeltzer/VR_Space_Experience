@@ -18,13 +18,14 @@ public class PlayerData : MonoBehaviour
         Medium,
         Hard
     }
-    public Difficulty difficulty;
+    public static Difficulty difficulty;
 
     private void OnEnable()
     {
         fuel = PlayerPrefs.GetInt("fuel");
         collectibles= PlayerPrefs.GetInt("collectibles");
         Enum.TryParse(PlayerPrefs.GetString("difficulty"), out difficulty);
+        ResetCollection();
     }
     private void Update()
     {
@@ -57,16 +58,16 @@ public class PlayerData : MonoBehaviour
         return fuel > 0;
     }
 
-    public void collectItem()
+    public void CollectItem()
     {
         collectibles++;
-        collectibleGauge.text = collectibles.ToString();
+        collectibleGauge.text = collectibles.ToString() + "/6";
     }
 
-    public void resetCollection()
+    public void ResetCollection()
     {
         collectibles = 0;
-        collectibleGauge.text = collectibles.ToString();
+        collectibleGauge.text = collectibles.ToString() + "/6";
     }
 
     static public void ResetPlayerMovement()
@@ -101,7 +102,7 @@ public class PlayerData : MonoBehaviour
     {
         PlayerData player = GameObject.Find("XR Origin").GetComponent<PlayerData>();
         player.Refuel();
-        player.resetCollection();
+        player.ResetCollection();
     }
 
     private void OnDisable()
