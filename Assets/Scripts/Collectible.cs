@@ -19,14 +19,11 @@ public class Collectible : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
 
     public void OnCollected()
     {
+        GameObject.Find("XR Origin").GetComponent<PlayerData>().CollectItem();
         Object.Destroy(this.gameObject);
     }
 }
