@@ -35,16 +35,17 @@ public class ControllerVelocity : MonoBehaviour
         // rb.velocity += (Vector3.forward / 100.0f);
 
 
-        angularVelocity = Quaternion.Euler(swap * ( (RightController.Thumbstick.normalized * (1.0f * Time.deltaTime * RightController.Thumbstick.magnitude))));
-        angularAcceleration *= angularVelocity;
-        rb.rotation *= angularAcceleration;
+        
 
-        if (playerData.difficulty == PlayerData.Difficulty.Hard)
+        if (PlayerData.difficulty == PlayerData.Difficulty.Hard)
         {
+            angularVelocity = Quaternion.Euler(swap * ((RightController.Thumbstick.normalized * (1.0f * Time.deltaTime * RightController.Thumbstick.magnitude))));
+            angularAcceleration *= angularVelocity;
             rb.rotation *= angularAcceleration;
         }
-        else if (playerData.difficulty == PlayerData.Difficulty.Medium)
+        else if (PlayerData.difficulty == PlayerData.Difficulty.Medium)
         {
+            angularVelocity = Quaternion.Euler(swap * ((RightController.Thumbstick.normalized * (100.0f * Time.deltaTime * RightController.Thumbstick.magnitude))));
             rb.rotation *= angularVelocity;
         }
 

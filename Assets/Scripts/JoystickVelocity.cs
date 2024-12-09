@@ -44,13 +44,14 @@ public class JoystickVelocity : MonoBehaviour
 
                 if (joystickController.positionController)
                 {
-                    if (playerData.difficulty == PlayerData.Difficulty.Hard)
+                    if (PlayerData.difficulty == PlayerData.Difficulty.Hard)
                     {
                         rb.velocity += (joystickController.currPos - joystickController.startPos).normalized * (5.0f * Time.deltaTime * (joystickController.currPos - joystickController.startPos).magnitude);
+                        //medium settings//rb.velocity = (joystickController.currPos - joystickController.startPos).normalized * (50.0f * Time.deltaTime * (joystickController.currPos - joystickController.startPos).magnitude);
                     }
-                    else if (playerData.difficulty == PlayerData.Difficulty.Medium)
+                    else if (PlayerData.difficulty == PlayerData.Difficulty.Medium)
                     {
-                        rb.velocity = (joystickController.currPos - joystickController.startPos).normalized * (5.0f * Time.deltaTime * (joystickController.currPos - joystickController.startPos).magnitude);
+                        rb.velocity = (joystickController.currPos - joystickController.startPos).normalized * (200.0f * Time.deltaTime * (joystickController.currPos - joystickController.startPos).magnitude);
                     }
 
                     if (joystickController.rotationController)
@@ -63,16 +64,18 @@ public class JoystickVelocity : MonoBehaviour
                 }
                 else if (joystickController.rotationController)
                 {
-                    angularVelocity = Quaternion.Euler(swap * (xrOrigin.worldToLocalMatrix * ((joystickController.currPos - joystickController.startPos).normalized * (1.0f * Time.deltaTime * (joystickController.currPos - joystickController.startPos).magnitude))));
-                    angularAcceleration *= angularVelocity;
-                    rb.rotation *= angularAcceleration;
+                 
 
-                    if (playerData.difficulty == PlayerData.Difficulty.Hard)
+                    if (PlayerData.difficulty == PlayerData.Difficulty.Hard)
                     {
+                        angularVelocity = Quaternion.Euler(swap * (xrOrigin.worldToLocalMatrix * ((joystickController.currPos - joystickController.startPos).normalized * (1.0f * Time.deltaTime * (joystickController.currPos - joystickController.startPos).magnitude))));
+                        angularAcceleration *= angularVelocity;
+                        rb.rotation *= angularAcceleration;
                         rb.rotation *= angularAcceleration;
                     }
-                    else if (playerData.difficulty == PlayerData.Difficulty.Medium)
+                    else if (PlayerData.difficulty == PlayerData.Difficulty.Medium)
                     {
+                        angularVelocity = Quaternion.Euler(swap * (xrOrigin.worldToLocalMatrix * ((joystickController.currPos - joystickController.startPos).normalized * (100.0f * Time.deltaTime * (joystickController.currPos - joystickController.startPos).magnitude))));
                         rb.rotation *= angularVelocity;
                     }
 

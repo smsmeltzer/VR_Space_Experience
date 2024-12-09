@@ -627,6 +627,14 @@ PrefabInstance:
 
 '
       objectReference: {fileID: 0}
+    - target: {fileID: 7948904902972027789, guid: e4b79422f49f3e34bba19c223d6cf72c, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 3517f2c227f3f2f4faff959bd1ca9ea9, type: 3}
+    - target: {fileID: 8096550172547751482, guid: e4b79422f49f3e34bba19c223d6cf72c, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1554,6 +1562,100 @@ MeshFilter:
 Transform:
   m_CorrespondingSourceObject: {fileID: 5881726178111038328, guid: e4b79422f49f3e34bba19c223d6cf72c, type: 3}
   m_PrefabInstance: {fileID: 189836358}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &659966621
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 926177767}
+    m_Modifications:
+    - target: {fileID: 2463252471208467444, guid: e4b79422f49f3e34bba19c223d6cf72c, type: 3}
+      propertyPath: m_Name
+      value: JoystickButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 5881726178111038328, guid: e4b79422f49f3e34bba19c223d6cf72c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.54038
+      objectReference: {fileID: 0}
+    - target: {fileID: 5881726178111038328, guid: e4b79422f49f3e34bba19c223d6cf72c, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.54038
+      objectReference: {fileID: 0}
+    - target: {fileID: 5881726178111038328, guid: e4b79422f49f3e34bba19c223d6cf72c, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.54038
+      objectReference: {fileID: 0}
+    - target: {fileID: 5881726178111038328, guid: e4b79422f49f3e34bba19c223d6cf72c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5881726178111038328, guid: e4b79422f49f3e34bba19c223d6cf72c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5881726178111038328, guid: e4b79422f49f3e34bba19c223d6cf72c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5881726178111038328, guid: e4b79422f49f3e34bba19c223d6cf72c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5881726178111038328, guid: e4b79422f49f3e34bba19c223d6cf72c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 5881726178111038328, guid: e4b79422f49f3e34bba19c223d6cf72c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 5881726178111038328, guid: e4b79422f49f3e34bba19c223d6cf72c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5881726178111038328, guid: e4b79422f49f3e34bba19c223d6cf72c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5881726178111038328, guid: e4b79422f49f3e34bba19c223d6cf72c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 5881726178111038328, guid: e4b79422f49f3e34bba19c223d6cf72c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 7821700537536414570, guid: e4b79422f49f3e34bba19c223d6cf72c, type: 3}
+      propertyPath: m_text
+      value: 'Movement
+
+        Tutorial 2
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7948904902972027789, guid: e4b79422f49f3e34bba19c223d6cf72c, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: f2a32de5d633fd2428804f9d359737b4, type: 3}
+    - target: {fileID: 8096550172547751482, guid: e4b79422f49f3e34bba19c223d6cf72c, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: f2a32de5d633fd2428804f9d359737b4, type: 3}
+    - target: {fileID: 8096550172547751482, guid: e4b79422f49f3e34bba19c223d6cf72c, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e4b79422f49f3e34bba19c223d6cf72c, type: 3}
+--- !u!4 &659966622 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5881726178111038328, guid: e4b79422f49f3e34bba19c223d6cf72c, type: 3}
+  m_PrefabInstance: {fileID: 659966621}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &687675661
 GameObject:
@@ -53903,6 +54005,10 @@ PrefabInstance:
 
 '
       objectReference: {fileID: 0}
+    - target: {fileID: 7948904902972027789, guid: e4b79422f49f3e34bba19c223d6cf72c, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 1378b78d9ff2693468b5b667c06473f0, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -53953,6 +54059,8 @@ Transform:
   - {fileID: 324464528}
   - {fileID: 5881726176632053153}
   - {fileID: 2047356971}
+  - {fileID: 2137274663}
+  - {fileID: 926177767}
   - {fileID: 494303051}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -54135,6 +54243,38 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 098146c10f59933428db467272801973, type: 3}
+--- !u!1 &926177766
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 926177767}
+  m_Layer: 0
+  m_Name: JoystickTutorial (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &926177767
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 926177766}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: -1, z: 0, w: 0}
+  m_LocalPosition: {x: -1.386, y: -4.085, z: 0.019}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 659966622}
+  m_Father: {fileID: 780554572}
+  m_LocalEulerAnglesHint: {x: 0, y: -180, z: 0}
 --- !u!1 &1022761719
 GameObject:
   m_ObjectHideFlags: 0
@@ -54701,6 +54841,100 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1504850754
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 2137274663}
+    m_Modifications:
+    - target: {fileID: 2463252471208467444, guid: e4b79422f49f3e34bba19c223d6cf72c, type: 3}
+      propertyPath: m_Name
+      value: JoystickButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 5881726178111038328, guid: e4b79422f49f3e34bba19c223d6cf72c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.54038
+      objectReference: {fileID: 0}
+    - target: {fileID: 5881726178111038328, guid: e4b79422f49f3e34bba19c223d6cf72c, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.54038
+      objectReference: {fileID: 0}
+    - target: {fileID: 5881726178111038328, guid: e4b79422f49f3e34bba19c223d6cf72c, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.54038
+      objectReference: {fileID: 0}
+    - target: {fileID: 5881726178111038328, guid: e4b79422f49f3e34bba19c223d6cf72c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5881726178111038328, guid: e4b79422f49f3e34bba19c223d6cf72c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5881726178111038328, guid: e4b79422f49f3e34bba19c223d6cf72c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5881726178111038328, guid: e4b79422f49f3e34bba19c223d6cf72c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5881726178111038328, guid: e4b79422f49f3e34bba19c223d6cf72c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 5881726178111038328, guid: e4b79422f49f3e34bba19c223d6cf72c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 5881726178111038328, guid: e4b79422f49f3e34bba19c223d6cf72c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5881726178111038328, guid: e4b79422f49f3e34bba19c223d6cf72c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5881726178111038328, guid: e4b79422f49f3e34bba19c223d6cf72c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 5881726178111038328, guid: e4b79422f49f3e34bba19c223d6cf72c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 7821700537536414570, guid: e4b79422f49f3e34bba19c223d6cf72c, type: 3}
+      propertyPath: m_text
+      value: 'Movement
+
+        Tutorial
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7948904902972027789, guid: e4b79422f49f3e34bba19c223d6cf72c, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 3a8f527169d2e4b4a98f09ab86829502, type: 3}
+    - target: {fileID: 8096550172547751482, guid: e4b79422f49f3e34bba19c223d6cf72c, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 3a8f527169d2e4b4a98f09ab86829502, type: 3}
+    - target: {fileID: 8096550172547751482, guid: e4b79422f49f3e34bba19c223d6cf72c, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e4b79422f49f3e34bba19c223d6cf72c, type: 3}
+--- !u!4 &1504850755 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5881726178111038328, guid: e4b79422f49f3e34bba19c223d6cf72c, type: 3}
+  m_PrefabInstance: {fileID: 1504850754}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1551483475
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -55026,6 +55260,18 @@ PrefabInstance:
       propertyPath: m_VerticalAlignment
       value: 512
       objectReference: {fileID: 0}
+    - target: {fileID: 7948904902972027789, guid: e4b79422f49f3e34bba19c223d6cf72c, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 67c8d7bb36ef8ae4bab09af215ee0663, type: 3}
+    - target: {fileID: 8096550172547751482, guid: e4b79422f49f3e34bba19c223d6cf72c, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 67c8d7bb36ef8ae4bab09af215ee0663, type: 3}
+    - target: {fileID: 8096550172547751482, guid: e4b79422f49f3e34bba19c223d6cf72c, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -55266,6 +55512,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5285713869211532283, guid: 91d39b266acbb6d41906226008eb06c4, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5703240374889741154, guid: 91d39b266acbb6d41906226008eb06c4, type: 3}
       propertyPath: fuel
       value: 100
@@ -55274,12 +55524,18 @@ PrefabInstance:
       propertyPath: difficulty
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6130421298154638625, guid: 91d39b266acbb6d41906226008eb06c4, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6897957914834953728, guid: 91d39b266acbb6d41906226008eb06c4, type: 3}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 799762260189146856, guid: 91d39b266acbb6d41906226008eb06c4, type: 3}
+    - {fileID: 4004170020498960721, guid: 91d39b266acbb6d41906226008eb06c4, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91d39b266acbb6d41906226008eb06c4, type: 3}
@@ -56345,6 +56601,38 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!1 &2137274662
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2137274663}
+  m_Layer: 0
+  m_Name: JoystickTutorial
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2137274663
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2137274662}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: -1, z: 0, w: 0}
+  m_LocalPosition: {x: -1.386, y: -3.536, z: 0.019}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1504850755}
+  m_Father: {fileID: 780554572}
+  m_LocalEulerAnglesHint: {x: 0, y: -180, z: 0}
 --- !u!1001 &234438747718957867
 PrefabInstance:
   m_ObjectHideFlags: 0
